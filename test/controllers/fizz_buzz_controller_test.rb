@@ -13,7 +13,7 @@ class FizzBuzzControllerTest < ActionDispatch::IntegrationTest
   test 'create page contains answer and link back to new page' do
     post fizz_buzz_index_path, xhr: true, params: { fizz_buzz: { number: '0' } }
     assert_response :ok
-    assert_select '#fizz_buzz_answer', text: '0'
+    assert_select '.js-fizz_buzz_answer', text: '0'
     assert_select "a[href='#{new_fizz_buzz_url}']"
   end
 end
