@@ -1,5 +1,11 @@
 require 'test_helper'
 
+class FizzBuzzerTest < ActiveSupport::TestCase
+  test 'foo' do
+    assert_equal FizzBuzzer.fizz_buzz(0), 0
+  end
+end
+
 class FizzBuzzControllerTest < ActionDispatch::IntegrationTest
   test 'new page contains form to input number to create' do
     get new_fizz_buzz_path
