@@ -22,8 +22,4 @@ class FizzBuzzControllerTest < ActionController::TestCase
     assert_response :ok
     assert_select '.js-fizz_buzz_answer', text: '1'
   end
-
-  test 'fizz_buzz with 1 returns 1' do
-    assert_equal 1, FizzBuzzController.fizz_buzz(1)
-  end
 end
