@@ -5,11 +5,9 @@ export function fizzbuzz(int) {
   if (!/^\d+$/.test(int)) {
     throw Error('Bad argument');
   }
-  if (int < 1) {
-    throw Error('Bad argument');
-  }
-  if (int > 14) {
-    throw Error('Bad argument');
+
+  if (int % 3 == 0 && int % 5 == 0) {
+    return 'FizzBuzz';
   }
 
   if (int % 3 == 0) {
