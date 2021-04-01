@@ -5,10 +5,13 @@ import { fizzbuzz } from "../src/fizzbuzz";
 describe('fizzbuzz', () => {
 
   it('fails if passed a bad argument', () => {
-    expect(() => fizzbuzz(-1)).to.throw();
     expect(() => fizzbuzz('foo')).to.throw();
     expect(() => fizzbuzz(14.1)).to.throw();
-    expect(() => fizzbuzz(15)).to.throw();
+  });
+
+  it('returns FizzBuzz if the integer is evenly divisible by 3 and 5', () => {
+    expect(fizzbuzz(15)).to.equal('FizzBuzz');
+    expect(fizzbuzz(30)).to.equal('FizzBuzz');
   });
 
   it('returns Fizz if the integer is evenly divisible by 3', () => {
