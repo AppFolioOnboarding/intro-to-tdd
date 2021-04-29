@@ -12,6 +12,12 @@ describe('fizzbuzz', () => {
 
   afterEach(() => {
     sinon.restore();
+  });
+
+  it('prints FizzBuzz if ...', () => {
+        fizzbuzz(15);
+
+    sinon.assert.calledOnceWithExactly(logStub, 'FizzBuzz');
   })
 
   it('prints Fizz if the input is 3', () => {
